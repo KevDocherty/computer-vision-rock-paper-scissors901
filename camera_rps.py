@@ -84,42 +84,65 @@ def get_winner(computer_choice, user_choice):
         print("This is not a valid object selection.")
         return
 
+    winner = 'tie'
     if computer_choice == 'rock':
         if user_choice == 'scissors':
             print("You lost")
+            winner = 'computer'
         elif user_choice == 'paper':
             print("You won!")
+            winner = 'user'
         elif user_choice == 'rock':
             print("It is a tie!")
 
     if computer_choice == 'paper':
         if user_choice == 'scissors':
             print("You won!")
+            winner = 'user'
         elif user_choice == 'paper':
             print("It is a tie!")
         elif user_choice == 'rock':
             print("You lost")
+            winner = 'computer'
 
     if computer_choice == 'scissors':
         if user_choice == 'scissors':
             print("It is a tie!")
         elif user_choice == 'paper':
             print("You lost")
+            winner = 'computer'
         elif user_choice == 'rock':
             print("You won!")
+            winner = 'user'
+    return winner
 
 def play():
     """
     This function calls the other functions to play a game of rock-paper-scissors
     """
-    computer_choice = get_computer_choice()
-    #user_choice = get_user_choice()
-    #user_choice = get_prediction()
-    user_choice = get_prediction()
+    user_wins = 0
+    computer_wins = 0
+    while True:
+        computer_choice = get_computer_choice()
+        user_choice = get_prediction()
 
-    print(f"The computer's choice is: {computer_choice}")
-    print(f"Your choice is: {user_choice}")
-    get_winner(computer_choice, user_choice)
+        print(f"The computer's choice is: {computer_choice}")
+        print(f"Your choice is: {user_choice}")
+        winner = get_winner(computer_choice, user_choice)
+        if winner == 'user':
+            user_wins += 1
+        elif winner == 'computer':
+            computer_wins += 1
+
+        if computer_wins == 3:
+            print('The computer wins!')
+            break
+        elif user_wins == 3:
+            print('The user wins!')
+            break
+
+
+
 
 if __name__ == '__main__':
     play()

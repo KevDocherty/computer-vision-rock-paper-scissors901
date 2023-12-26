@@ -23,8 +23,8 @@ or
 > 'python camera_rps.py'
 
 ## File structure of the project
-The files necessary to play the game, are contaied in the root folder. Incidental
-files used during development, are saved to the folder './other'.
+The files necessary to play the game, are contaied in the root folder.
+Incidental files used during development, are saved to the folder './other'.
 ```
 .
 ├── Keras_model.py
@@ -36,6 +36,7 @@ files used during development, are saved to the folder './other'.
 ├── other
 │   ├── OpenCV_Keras.py
 │   ├── RPS-Template.py
+│   ├── camera_rps_old.py
 │   └── requirements_rock-paper-scissors.txt
 ├── requirements.txt
 └── requirements_rps_game.txt
