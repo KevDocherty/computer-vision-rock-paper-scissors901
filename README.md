@@ -24,7 +24,8 @@ or
 
 ## File structure of the project
 The files necessary to play the game, are contaied in the root folder. Incidental
-files used during development, are saved to the folder './other'
+files used during development, are saved to the folder './other'.
+```
 .
 ├── Keras_model.py
 ├── README.md
@@ -38,6 +39,6 @@ files used during development, are saved to the folder './other'
 │   └── requirements_rock-paper-scissors.txt
 ├── requirements.txt
 └── requirements_rps_game.txt
-
+```
 ## License information
 n/a

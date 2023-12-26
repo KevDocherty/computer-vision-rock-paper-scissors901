@@ -1,5 +1,5 @@
 """
-This module contains the functions required to play a game of 'rock-paper-scissors',
+This module contains the functions required to play a game of 'rock-paper-scissors'
 using computer vision to recognise the user's gestures,
 and calls said functions so that a user can play against the computer
 """
@@ -21,12 +21,9 @@ def get_prediction():
     cap = cv2.VideoCapture(0)
 
     # 'data' = 4-dimensional numpy array:
-    # - the first dimension represents the number of samples in the array,
-    # which is 1 in this case
-    # - the second and third dimensions represent the height and width of the image,
-    # which are both 224 pixels.
-    # - the fourth dimension represents the number of color channels in the image,
-    # which is 3 (red, green, and blue)
+    # - the first dimension represents the number of samples in the array (1 in this case)
+    # - the second and third dimensions represent the height and width of the image (both 224 pixels)
+    # - the fourth dimension represents the number of color channels in the image, = 3 (red, green, and blue)
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
     # create an empty np array to append each prediction as a separate row
