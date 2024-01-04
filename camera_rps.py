@@ -76,9 +76,8 @@ def get_computer_choice():
 def get_winner(computer_choice, user_choice):
     """
     This function compares the choices of the user and the computer
-    and prints a message to let the user know the result of the game.
-
-    It returns nothing.
+    and prints a message to let the user know the result of the game
+    and returns the winner.
     """
     if user_choice not in ['rock', 'paper', 'scissors']:
         print("This is not a valid object selection.")
@@ -118,7 +117,9 @@ def get_winner(computer_choice, user_choice):
 
 def play():
     """
-    This function calls the other functions to play a game of rock-paper-scissors
+    This function calls the other functions to play a game of rock-paper-scissors.
+    It counts the number of wins for the user and the computer, such that the
+    overall winner is the first to win 3 games
     """
     user_wins = 0
     computer_wins = 0

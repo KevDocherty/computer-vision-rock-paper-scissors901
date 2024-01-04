@@ -22,6 +22,8 @@ Run the game from the command line, via:
 or
 > 'python camera_rps.py'
 
+The game is over when either the user or the computer achieves 3 wins.
+
 ## File structure of the project
 The files necessary to play the game, are contaied in the root folder.
 Incidental files used during development, are saved to the folder './other'.
